@@ -15,17 +15,6 @@ class Animal:
         if self.health <= 0 and self in Animal.alive:
             Animal.alive.remove(self)
 
-    @staticmethod
-    def print_alive() -> None:
-        result = []
-        for animal in Animal.alive:
-            result.append(
-                f"{{Name: {animal.name}, "
-                f"Health: {animal.health}, "
-                f"Hidden: {animal.hidden}}}"
-            )
-        print(result)
-
     def __repr__(self) -> str:
         return (
             f"{{Name: {self.name}, "
