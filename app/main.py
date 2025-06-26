@@ -20,12 +20,18 @@ class Animal:
         result = []
         for animal in Animal.alive:
             result.append(
-                f"{{Name: {animal.name}, Health: {animal.health}, Hidden: {animal.hidden}}}"
+                f"{{Name: {animal.name}, "
+                f"Health: {animal.health}, "
+                f"Hidden: {animal.hidden}}}"
             )
         print(result)
 
     def __repr__(self) -> str:
-        return f"{{Name: {self.name}, Health: {self.health}, Hidden: {self.hidden}}}"
+        return (
+            f"{{Name: {self.name}, "
+            f"Health: {self.health}, "
+            f"Hidden: {self.hidden}}}"
+        )
 
 
 class Herbivore(Animal):
