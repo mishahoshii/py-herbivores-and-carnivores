@@ -39,4 +39,3 @@ class Carnivore(Animal):
             return
         victim.health -= 50
         victim._check_if_alive()
-
